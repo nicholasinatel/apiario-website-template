@@ -2,15 +2,15 @@ $(document).ready(function() {
     console.log("Canvas Load Ok");
     var W = window.innerWidth,
         H = window.innerHeight,
-        particleCount = 200,
+        particleCount = 15,
         particles = [],
-        minDist = 120,
+        minDist = 250,
         dist,
-        bgColor = "rgba(150,82,81,1)", // marsala of course
-        dotColor = "#fff",
-        xSpeed = 5,
-        ySpeed = 5,
-        dotSize = 13; 
+        bgColor = "rgba(238,150,32,1)", // marsala of course
+        dotColor = "#ee9620",
+        xSpeed = 3,
+        ySpeed = 3,
+        dotSize = 30; 
 
     // RequestAnimFrame for smooth animation
     window.requestAnimFrame = (function() {
@@ -35,7 +35,12 @@ $(document).ready(function() {
 
     // paint canvas
     function paintCanvas() {
-        ctx.fillStyle = bgColor;
+        var my_gradient = ctx.createLinearGradient(0,0,0,170);
+        my_gradient.addColorStop(1, "white");
+        my_gradient.addColorStop(0.5, "#f7d706");
+        my_gradient.addColorStop(0, "#ee9620");
+        // ctx.fillStyle = bgColor;
+        ctx.fillStyle = my_gradient;
         ctx.fillRect(0, 0, W, H);
     }
 
@@ -43,7 +48,7 @@ $(document).ready(function() {
     function Particle() {
         // position
         this.x = Math.random() * W;
-        this.y = Math.random() * H;
+        this.y = Math.random() * (H);
         // speed
         this.vx = -1 + Math.random() * (Math.random() * xSpeed);
         this.vy = -1 + Math.random() * (Math.random() * ySpeed);
@@ -52,7 +57,7 @@ $(document).ready(function() {
 
         // draw them
         this.draw = function() {
-            ctx.fillStyle = "white";
+            ctx.fillStyle = dotColor;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
 
@@ -135,16 +140,16 @@ $(document).ready(function() {
         if (dist <= minDist) {
             // draw line
             ctx.beginPath();
-            ctx.strokeStyle = "rgba(255,82,81," + (1.2 - (dist / minDist) / Math.random()) + ")";
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = "rgba(255,219,0," + (1.2 - (dist / minDist) / Math.random()) + ")";
+            ctx.lineWidth = 3;
             ctx.moveTo(mouse.x, mouse.y);
             ctx.lineTo(p1.x, p1.y);
             ctx.stroke();
             ctx.closePath();
 
             // acceleration depending on distance
-            var ax = dy / 50000,
-                ay = dy / 50000;
+            var ax = dy / 5000000,
+                ay = dy / 5000000;
 
             // apply acceleration
             p1.vx -= ax;

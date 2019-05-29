@@ -13,12 +13,12 @@
   background-color: #ffffff; }
 
 a {
-  color: #3346d1; }
+  color: #ee9620; }
 a:hover {
-  color: rgba(19, 66, 248, 0.8); }
+  color: rgb(223, 197, 31); }
 
 .menu-icon .bars .bar1, .menu-icon .bars .bar2, .menu-icon .bars .bar3 {
-  background: #3346d1; }
+  background: #ee9620; }
 
 .body-item .page-header-alpha .navbar-brand {
   color: #ffffff; }
@@ -137,6 +137,10 @@ a:hover {
 /* scroll down */
 .scrolldown a:before {
   color: #000;
+  transform: scale(4);
+  height: 7px;
+  /* top: -50px; */
+  /* width: 10px; */
 }
 
 /* footer */
@@ -159,7 +163,9 @@ a:hover {
 
 /* dot nav at right */
 #fp-nav ul li a span {
-  background: #3b3b3b; }
+  background: #3b3b3b; 
+  width: 25px;
+}
 
 #fp-nav li .active span, .fp-slidesNav .active span {
   background: #3b3b3b; }
@@ -194,10 +200,10 @@ a:hover {
   background: #1d1d1d;
 }
 .about-section .mission-border {
-  border-color: #3346d1;
+  border-color: #ee9620;
 }
 .section-team h5, .section-team p {
-  color: #fff;
+  color: black;
 }
 
 .navbar-sidebar .social a {

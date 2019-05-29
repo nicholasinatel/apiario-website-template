@@ -1,3 +1,46 @@
 canvas {
     position: absolute;
+    height: 100vh;
+    /* top: 120px; */
+    /* right: 0; */
+    /* left: 0; */
+    width: 100vw;
+    /* z-index: 1; */
 }
+
+#icon-dark,
+#url-dark {
+    color: black;
+}
+
+#melpage {
+    position: relative;
+    top: 80px;
+}
+
+/* .body-item .page-header-alpha .navbar-brand {
+    left: 32px;
+    top: 20px;
+} */
+
+.page-header-alpha {
+    height: 80px;
+    background: -moz-element(#canvas);
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.page-header-alpha .navbar-mainmenu .nav-item a:hover {
+    color: #ee9620;
+}
+
+#main-logo{
+    margin-top: 50px;
+}
+/* .light-logo {
+    width: 120px;
+    height: 120px;
+} */
