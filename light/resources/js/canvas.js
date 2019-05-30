@@ -35,7 +35,7 @@ $(document).ready(function() {
 
     // paint canvas
     function paintCanvas() {
-        var my_gradient = ctx.createLinearGradient(0,0,0,170);
+        var my_gradient = ctx.createLinearGradient(0,0,0,200);
         my_gradient.addColorStop(1, "white");
         my_gradient.addColorStop(0.5, "#f7d706");
         my_gradient.addColorStop(0, "#ee9620");

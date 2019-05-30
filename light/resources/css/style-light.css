@@ -18,7 +18,9 @@ a:hover {
   color: rgb(223, 197, 31); }
 
 .menu-icon .bars .bar1, .menu-icon .bars .bar2, .menu-icon .bars .bar3 {
-  background: #ee9620; }
+  background: white; 
+  text-shadow: 5px 5px 5px black;
+}
 
 .body-item .page-header-alpha .navbar-brand {
   color: #ffffff; }

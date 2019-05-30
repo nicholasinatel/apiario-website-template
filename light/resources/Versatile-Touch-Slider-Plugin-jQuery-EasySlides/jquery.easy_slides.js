@@ -23,7 +23,7 @@ Usage:
         var settings = $.extend({
             'autoplay': false,
             'timeout': 3000,
-            'show': 5,
+            'show': 4,
             'vertical': false,
             'reverse': false,
             'touchevents': true,

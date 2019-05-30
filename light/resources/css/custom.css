@@ -24,13 +24,9 @@ canvas {
 } */
 
 .page-header-alpha {
-    height: 80px;
-    background: -moz-element(#canvas);
-    background: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
+    height: 0px;
+    background: transparent;
+    padding: 0;
 }
 
 .page-header-alpha .navbar-mainmenu .nav-item a:hover {
@@ -39,6 +35,10 @@ canvas {
 
 #main-logo{
     margin-top: 50px;
+}
+
+.img-slider {
+    width: 100%;
 }
 /* .light-logo {
     width: 120px;

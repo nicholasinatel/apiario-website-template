@@ -3137,7 +3137,7 @@ textarea {
 @media (min-width: 768px) {
     .page-header-alpha.menu-right .navbar-brand {
         left: 64px;
-        top: 0px;
+        top: 20px;
     }
 }
 
@@ -3267,6 +3267,8 @@ textarea {
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     color: currentColor;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 @media (min-width: 768px) {
