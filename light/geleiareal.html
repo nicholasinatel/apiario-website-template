@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js outer-page" lang="pt-BR">
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -10,7 +10,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="resources/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/img/mel-flordemel.png">
 
     <!-- Web fonts/Icons -->
     <link rel="stylesheet" href="resources/fonts/opensans/stylesheet.css">
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="resources/css/style-light.css">
     <link rel="stylesheet" href="resources/css/custom.css">
-
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
 </head>
 
 <body id="menu" class="body-item">
@@ -41,6 +41,17 @@
         <div>
             <div class="icon ion-spin"></div>
         </div>
+        <!-- <div id="bee">
+                <div id="bee-body">
+                    <div id="head"></div>
+                    <div id="thorax"></div>
+                    <div id="stinger"></div>
+                    <div id="antenna1"></div>
+                    <div id="antenna2"></div>
+                    <div id="wing1"></div>
+                    <div id="wing2"></div>
+                </div>
+            </div> -->
     </div>
 
     <!-- Start Header -->
@@ -65,7 +76,8 @@
 
         <a class="navbar-brand" href="index.html#home">
             <span class="logo">
-                <img id="item-logo" class="light-logo" src="resources/img/mel-main-small-logo-120px.png" alt="Logo">
+                <img id="item-logo" class="light-logo" src="resources/img/mel-main-small-logo-white-120px.png"
+                    alt="Logo">
             </span>
         </a>
 
@@ -120,9 +132,9 @@
                                     <div class="wrapper">
                                         <h2>Geleia Real</h2>
                                         <div class="info-small">
-                                            <!-- <p><i class="icon ion-calendar"></i> Febuary 27, 2019</p> -->
                                             <p><i id="icon-dark" class="icon ion-link"></i> <a id="url-dark"
-                                                    href="#">www.apiarioflordemel.com.br</a></p>
+                                                    href="http://www.apiarioflordemel.com.br">Apiário Flor de Mel</a>
+                                            </p>
                                         </div>
 
                                         <div class="item row justify-content-between mt-5">
@@ -153,7 +165,18 @@
                                         </h5>
                                     </div>
                                 </div>
-
+                                <div class="btns-action row item-buttons">
+                                    <div class="col-md-12 item-buttons-next">
+                                        <a class="btn btn-outline-white border-0" href="propolis.html">
+                                            <i class="icon fa fa-arrow-circle-left mr-2"></i>
+                                            <span class="txt">Própolis</span>
+                                        </a>
+                                        <a class="btn btn-outline-white border-0" href="polen.html">
+                                            <span class="txt">Pólen</span>
+                                            <i class="icon fa fa-arrow-circle-right ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
                                 <footer class="article-footer">
                                     <div class="article-details">
                                         <h3>Entre em contato</h3>
@@ -167,18 +190,7 @@
                                 </footer>
                             </article>
 
-                            <div class="btns-action row item-buttons">
-                                <div class="col-md-12 item-buttons-next">
-                                    <a class="btn btn-outline-white border-0" href="propolis.html">
-                                        <i class="icon fa fa-arrow-circle-left mr-2"></i>
-                                        <span class="txt">Própolis</span>
-                                    </a>
-                                    <a class="btn btn-outline-white border-0" href="polen.html">
-                                        <span class="txt">Pólen</span>
-                                        <i class="icon fa fa-arrow-circle-right ml-2"></i>
-                                    </a>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -196,7 +208,12 @@
     <!-- Main Script files -->
     <script src="resources/js/custom.js"></script>
     <script src="resources/js/canvas.js"></script>
-    <script src="resources/js/messager.js"></script>
+    <script>
+        window.fcWidget.init({
+            token: "53693e27-4e30-4728-b606-42f3d9a48ea0",
+            host: "https://wchat.freshchat.com"
+        });
+    </script>
 </body>
 
 </html>

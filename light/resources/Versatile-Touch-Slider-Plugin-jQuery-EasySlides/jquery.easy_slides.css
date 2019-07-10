@@ -9,7 +9,7 @@
     /*overflow: hidden;*/
 }
 
-.slider_one_big_picture > * {
+.slider_one_big_picture>* {
     transition: ease all 1s;
 }
 
@@ -75,7 +75,7 @@
     user-select: none;
 }
 
-.slider_one_big_2 > * {
+.slider_one_big_2>* {
     transition: ease all 1s;
 }
 
@@ -160,16 +160,16 @@
     position: relative;
     width: 100%;
     /* 640px; */
-    height: 53.2vw;
+    height: 40vw;
     margin: 0 auto;
     user-select: none;
 }
 
-.slider_circle_10 > * {
+.slider_circle_10>* {
     transition: ease all 1s;
 }
 
-.slider_circle_10 > div,
+.slider_circle_10>div,
 .slider_circle_10 .hidden {
     opacity: 0;
     position: absolute;
@@ -282,7 +282,7 @@
     user-select: none;
 }
 
-.slider_four_in_line > * {
+.slider_four_in_line>* {
     transition: ease all 1s;
     overflow: hidden;
 }
@@ -363,7 +363,7 @@
     user-select: none;
 }
 
-.slider_clock > * {
+.slider_clock>* {
     transition: ease all 1s;
 }
 
@@ -532,7 +532,7 @@
     text-align: center;
     line-height: 30px;
     border-radius: 50%;
-    
+
 }
 
 .prev_button {
@@ -544,6 +544,7 @@
 .prev_button:hover {
     opacity: 1 !important;
 }
+
 .next_button:after,
 .prev_button:after {
     content: "";
@@ -572,7 +573,7 @@
 }
 
 
-div.slider > div:not(.nav_indicators):not(.next_button):not(.prev_button) {
+div.slider>div:not(.nav_indicators):not(.next_button):not(.prev_button) {
     box-shadow: 0px 1px 3px #000;
     border: 1px solid #000;
     background: #fff;

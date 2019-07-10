@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="pt-BR">
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -10,7 +10,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="resources/img/mel-flordemel.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/img/mel-main-small-logo-120px.png">
 
     <!-- Web fonts/Icons -->
     <link rel="stylesheet" href="resources/fonts/opensans/stylesheet.css">
@@ -25,9 +25,9 @@
 
     <!-- Main CSS files -->
     <link rel="stylesheet" href="resources/css/style.css">
-
     <link rel="stylesheet" href="resources/css/style-light.css">
     <link rel="stylesheet" href="resources/css/custom.css">
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
 </head>
 
 <body id="menu" class="body-page">
@@ -40,6 +40,17 @@
         <div>
             <div class="icon ion-spin"></div>
         </div>
+        <!-- <div id="bee">
+                <div id="bee-body">
+                    <div id="head"></div>
+                    <div id="thorax"></div>
+                    <div id="stinger"></div>
+                    <div id="antenna1"></div>
+                    <div id="antenna2"></div>
+                    <div id="wing1"></div>
+                    <div id="wing2"></div>
+                </div>
+            </div> -->
     </div>
 
     <!-- Start Header -->
@@ -56,7 +67,11 @@
 
         <a class="navbar-brand" href="#home">
             <span class="logo">
-                <img id="item-logo" class="light-logo" src="resources/img/mel-main-small-logo-white-120px.png" alt="Logo">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="resources/img/mel-main-small-logo-120px.png 1x">
+                    <img id="item-logo" class="light-logo" src="resources/img/mel-main-small-logo-white-120px.png"
+                        alt="Logo">
+                </picture>
             </span>
         </a>
 
@@ -127,8 +142,11 @@
                     <div class="row">
                         <div class="col-12 col-md-12 text-center">
                             <div class="title-desc">
-                                <!-- <h2 class="display-4 display-title home-title anim-1">Apiário Flor de Mel</h2> -->
-                                <img id="main-logo" class="img" src="resources/img/flordemel-main-small.png" alt="Image">
+                                <picture>
+                                    <source media="(max-width: 480px)"
+                                        srcset="resources/img/mel-main-small-logo-180px.png 1x">
+                                    <img id="main-logo" class="img" src="resources/img/flordemel-main.png" alt="Image">
+                                </picture>
                                 <h4 class="anim-2 opacity-75">Felicidade é o sabor da natureza</h4>
                             </div>
                         </div>
@@ -162,8 +180,8 @@
                         <div class="col-12 col-md-8 text-left mission-border anim-2">
                             <div class="title-desc anim-2">
                                 <p>Desde 2012</p>
-                                <p>Somos uma empresa familiar do Sul de Minas Gerais 
-                                    que deseja fornecer aos nossos clientes produtos apícolas de alta qualidade - 
+                                <p>Somos uma empresa familiar do Sul de Minas Gerais
+                                    que deseja fornecer aos nossos clientes produtos apícolas de alta qualidade -
                                     das colméias à sua mesa. Nossas abelhas, sua felicidade.</p>
                                 <!-- <p>Somos um entreposto de mel e cera de abelhas, focados na qualidade que entregamos
                                     aos nossos clientes. Estamos localizados dentro da cidade de São Lourenço-MG, em
@@ -201,7 +219,8 @@
                                     <div class="img-avatar-alpha">
                                         <div class="img-1 shadow">
                                             <a href="laboratorio.html">
-                                                <img class="img" src="resources/img/mel-flor-de-mel-icon1.png" alt="Image">
+                                                <img class="img" src="resources/img/mel-flor-de-mel-icon1.png"
+                                                    alt="Image">
                                             </a>
                                             <div class="legend pos-abs">
                                                 <div class="text-left">
@@ -229,12 +248,12 @@
                                                 </div>
                                             </div>
                                             <div class="icons text-left">
-                                                <a class="icon-btn" href="#">
+                                                <!-- <a class="icon-btn" href="#">
                                                     <i class="icon ion-social-linkedin"></i>
                                                 </a>
                                                 <a class="icon-btn" href="#">
                                                     <i class="icon ion-social-facebook"></i>
-                                                </a>
+                                                </a> -->
                                             </div>
                                         </div>
                                     </div>
@@ -535,14 +554,14 @@
                             Estadão
                         </a>
                     </div>
-                </div>            
+                </div>
             </div>
             <footer class="section-footer scrolldown">
-                    <a class="down">
-                        <span class="icon"></span>
-                        <span class="txt">Entre em contato</span>
-                    </a>
-                </footer>
+                <a class="down">
+                    <span class="icon"></span>
+                    <span class="txt">Entre em contato</span>
+                </a>
+            </footer>
         </div>
 
 
@@ -627,18 +646,7 @@
 
         <!-- Right content -->
         <div class="footer-right">
-            <!-- <a href="https://wa.me/553591551560/?text=test">
-                    <button>
-                        Click Me
-                    </button>
-                </a> -->
 
-
-            <!-- <p class="note">© 2019 Developed by
-                <a href="https://themeforest.net/user/lifeinsys/portfolio">
-                    <span class="marked"> LifeInSYS</span>
-                </a>
-            </p> -->
         </div>
     </footer>
     <!-- End Footer  -->
@@ -652,7 +660,12 @@
     <!-- Main Script files -->
     <script src="resources/js/custom.js"></script>
     <script src="resources/js/canvas.js"></script>
-    <script src="resources/js/messager.js"></script>
+    <script>
+        window.fcWidget.init({
+            token: "53693e27-4e30-4728-b606-42f3d9a48ea0",
+            host: "https://wchat.freshchat.com"
+        });
+    </script>
 </body>
 
 </html>
