@@ -2,7 +2,7 @@ $(document).ready(function() {
   console.log('Canvas Load Ok');
   var W = window.innerWidth,
     H = window.innerHeight,
-    particleCount = 15,
+    particleCount = 5,
     particles = [],
     minDist = 250,
     dist,
@@ -10,7 +10,11 @@ $(document).ready(function() {
     dotColor = '#ee9620',
     xSpeed = 3,
     ySpeed = 3,
-    dotSize = 10;
+    dotSize = 10,
+    side = 0,
+    size = 50,
+    x_axis = 100,
+    y_axis = 100;
 
   // RequestAnimFrame for smooth animation
   window.requestAnimFrame = (function() {
@@ -56,23 +60,30 @@ $(document).ready(function() {
     this.vx = -1 + Math.random() * (Math.random() * xSpeed);
     this.vy = -1 + Math.random() * (Math.random() * ySpeed);
     // size
-    this.radius = Math.random() * (Math.random() * dotSize);
+    // this.radius = Math.random() * (Math.random() * dotSize);
 
     // draw them
     this.draw = function() {
       ctx.fillStyle = dotColor;
       ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-
-      // Fill the arc we just made
+      ctx.moveTo(x_axis + size * Math.cos(0), y_axis + size * Math.sin(0));
+      /** Generate Dots */
+      // ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+      for (let side=0; side < 7; side++) {
+        ctx.lineTo(x_axis + size * Math.cos(side * 2 * Math.PI / 6), y_axis + size * Math.sin(side * 2 * Math.PI / 6));
+      }
+      ctx.closePath();
+      // Fill the arc/hexagon we just made
       ctx.fill();
     };
   }
 
   // to array
   for (var i = 0; i < particleCount; i++) {
-    particles.push(new Particle());
+    particles.push(new Particle());    
   }
+
+  console.log({particles});
 
   // draw the things
   function draw() {
@@ -109,10 +120,10 @@ $(document).ready(function() {
       }
 
       // make them attract
-      for (var j = i + 1; j < particles.length; j++) {
-        p2 = particles[j];
-        distance(p, p2);
-      }
+      // for (var j = i + 1; j < particles.length; j++) {
+      //   p2 = particles[j];
+      //   distance(p, p2);
+      // }
     }
   }
   var mouse = {
@@ -139,14 +150,14 @@ $(document).ready(function() {
     // draw line if distance is smaller than minimum distance
     if (dist <= minDist) {
       // draw line
-      ctx.beginPath();
-      ctx.strokeStyle =
-        'rgba(255,219,0,' + (1.2 - dist / minDist / Math.random()) + ')';
-      ctx.lineWidth = 3;
-      ctx.moveTo(mouse.x, mouse.y);
-      ctx.lineTo(p1.x, p1.y);
-      ctx.stroke();
-      ctx.closePath();
+      // ctx.beginPath();
+      // ctx.strokeStyle =
+      //   'rgba(255,219,0,' + (1.2 - dist / minDist / Math.random()) + ')';
+      // ctx.lineWidth = 3;
+      // ctx.moveTo(mouse.x, mouse.y);
+      // ctx.lineTo(p1.x, p1.y);
+      // ctx.stroke();
+      // ctx.closePath();
 
       // acceleration depending on distance
       var ax = dy / 5000000,

@@ -1,3 +1,7 @@
 onWork/
 prepros-6.config
 deploy/
+*.zip
+BKUP/
+hexagon/
+light/
